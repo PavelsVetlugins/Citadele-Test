@@ -24,6 +24,7 @@
 		419257572924CFB000668023 /* Citadele_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257562924CFB000668023 /* Citadele_testUITests.swift */; };
 		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
 		419257682924D35B00668023 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257672924D35B00668023 /* HomeScene.swift */; };
+		41941F8C29254EC700B0CC9D /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */; };
 		D2B05DF4553B5602A970B24B /* Pods_Citadele_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */; };
 		DE5B4C891BF790AB6DD04D57 /* Pods_Citadele_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */; };
 		FC5BE985D799F20692CA470C /* Pods_Citadele_test_Citadele_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */; };
@@ -71,6 +72,7 @@
 		419257562924CFB000668023 /* Citadele_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITests.swift; sourceTree = "<group>"; };
 		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		419257672924D35B00668023 /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
+		41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
 		52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test/Pods-Citadele-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				414336DC29250F2700696104 /* Collection+.swift */,
 				414336E029253FE400696104 /* Publisher+.swift */,
+				41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				414336E129253FE400696104 /* Publisher+.swift in Sources */,
 				414336DD29250F2700696104 /* Collection+.swift in Sources */,
 				414336DA292508DD00696104 /* CurrateResponse.swift in Sources */,
+				41941F8C29254EC700B0CC9D /* NumberFormatter+.swift in Sources */,
 				414336D1292502B900696104 /* HttpRequest.swift in Sources */,
 				414336CC2925015000696104 /* CurrencySelector.swift in Sources */,
 				414336CE2925026C00696104 /* CurrencyConverterVM.swift in Sources */,

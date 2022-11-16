@@ -48,21 +48,50 @@ final class CurrencyConverterVM: ObservableObject {
             .assign(to: \.selectedRate, on: self)
             .store(in: &store)
 
-        $sellingCurrencyValue
+        let sellRate = $selectedRate
+            .compactMap { rate -> Double? in
+                guard let sell = rate.sellTransfer,
+                      let sellValue = Double(sell) else { return nil }
+                if self.selectedCurrency.reverseUsdQuot, rate.currency == "USD" {
+                    return 1 / sellValue
+                }
+                return sellValue
+            }
+            .share()
+
+        let sellingCurrencyValidChange = $sellingCurrencyValue
             .withLatestFrom(isBuyingFieldEditing)
             .filter { $1 == false }
-            .map { input, _ in
-                "\((Decimal(string: input) ?? 0) * 2)"
+            .map { value, _ in value }
+            .compactMap { Double($0) }
+            .share()
+
+        let triggerSellCalculation = Publishers.CombineLatest3(sellingCurrencyValidChange, $selectedCurrency, sellRate)
+            .share()
+
+        triggerSellCalculation
+            .map { amount, _, rate in
+                CurrencyFormatter.asCurrency(price: amount / rate) ?? ""
             }
+            .receive(on: DispatchQueue.main)
             .assign(to: \.buyingCurrencyValue, on: self)
             .store(in: &store)
 
-        $buyingCurrencyValue
+        let buyingCurrencyValidChange = $buyingCurrencyValue
             .withLatestFrom(isSellingFieldEditing)
             .filter { $1 == false }
-            .map { input, _ in
-                "\((Decimal(string: input) ?? 0) * 2)"
+            .map { value, _ in value }
+            .compactMap { Double($0) }
+            .share()
+
+        let triggerBuyCalculation = buyingCurrencyValidChange.withLatestFrom(sellRate)
+            .share()
+
+        triggerBuyCalculation
+            .map { amount, rate in
+                CurrencyFormatter.asCurrency(price: amount * rate) ?? ""
             }
+            .receive(on: DispatchQueue.main)
             .assign(to: \.sellingCurrencyValue, on: self)
             .store(in: &store)
     }
