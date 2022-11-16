@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct CurrencyList: View {
-    @State var selected: Currency?
-    let currencies: [Currency]
-    var onSelect: (Currency) -> Void
+struct CurrencyList<T: CurrencyPresentable>: View {
+    @State var selected: T?
+    let currencies: [T]
+    var onSelect: (String) -> Void
 
     var body: some View {
         List {
@@ -23,22 +23,9 @@ struct CurrencyList: View {
                         .foregroundColor(isSelected ? .red : Color.primary)
                 }.onTapGesture {
                     self.selected = currency
-                    onSelect(currency)
+                    onSelect(currency.id)
                 }
             }
         }
-    }
-}
-
-struct CurrencyList_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrencyList(selected: Currency.mock(), currencies: [
-            Currency.mock(),
-            Currency.mock(),
-            Currency.mock(),
-            Currency.mock(),
-            Currency.mock(),
-            Currency.mock(),
-        ], onSelect: { _ in })
     }
 }

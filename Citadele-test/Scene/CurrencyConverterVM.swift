@@ -9,23 +9,18 @@ import Combine
 import Foundation
 import SwiftUI
 
-enum ListType {
-    case sell
-    case buy
-}
-
 final class CurrencyConverterVM: ObservableObject {
-    @Published var sellingCurrency: Currency? = nil
+    @Published var selectedCurrency: Currency = .empty()
     @Published var sellingCurrencyValue: String = ""
     public var isSellingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
 
-    @Published var buyingCurrency: Currency? = nil
+    @Published var selectedRate: Rate = .empty()
     @Published var buyingCurrencyValue: String = ""
     public var isBuyingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
 
-    @Published var showingCurrencyListForType: ListType? = nil
-
     private let _currencyList: CurrentValueSubject<[Currency], Never> = .init([])
+    public var currencyList: [Currency] { _currencyList.value }
+    public var rates: [Rate] { selectedCurrency.rates }
 
     var store = Set<AnyCancellable>()
 
@@ -45,12 +40,12 @@ final class CurrencyConverterVM: ObservableObject {
     private func bind() {
         _currencyList.compactMap { $0[safe: 0] }
             .receive(on: DispatchQueue.main)
-            .assign(to: \.sellingCurrency, on: self)
+            .assign(to: \.selectedCurrency, on: self)
             .store(in: &store)
 
-        _currencyList.compactMap { $0[safe: 1] }
+        $selectedCurrency.compactMap { $0.rates.first }
             .receive(on: DispatchQueue.main)
-            .assign(to: \.buyingCurrency, on: self)
+            .assign(to: \.selectedRate, on: self)
             .store(in: &store)
 
         $sellingCurrencyValue
@@ -72,40 +67,11 @@ final class CurrencyConverterVM: ObservableObject {
             .store(in: &store)
     }
 
-    public func bindingForShowingCurrencyList() -> Binding<Bool> {
-        .init {
-            self.showingCurrencyListForType != nil
-        } set: { newValue in
-            if !newValue {
-                self.showingCurrencyListForType = nil
-            }
-        }
+    public func selectedCurrency(id: String) {
+        selectedCurrency = currencyList.first { $0.id == id } ?? .empty()
     }
 
-    public func selected(curreny: Currency) {
-        switch showingCurrencyListForType {
-        case .sell:
-            sellingCurrency = curreny
-        case .buy:
-            buyingCurrency = curreny
-        default: break
-        }
-        showingCurrencyListForType = nil
-    }
-
-    public func selectableList() -> [Currency] {
-        if showingCurrencyListForType == .buy {
-            return _currencyList.value.filter { $0.id != sellingCurrency?.id }
-        } else {
-            return _currencyList.value.filter { $0.id != buyingCurrency?.id }
-        }
-    }
-
-    public func selectedCurrecny() -> Currency? {
-        if showingCurrencyListForType == .buy {
-            return buyingCurrency
-        } else {
-            return sellingCurrency
-        }
+    public func selectedRate(id: String) {
+        selectedRate = selectedCurrency.rates.first { $0.id == id } ?? .empty()
     }
 }

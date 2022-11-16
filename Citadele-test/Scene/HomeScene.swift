@@ -10,14 +10,16 @@ import SwiftUI
 struct HomeScene: View {
     @State var isNonCash: Bool = false
     @StateObject var vm = CurrencyConverterVM()
+    @State var showingCurrencyList = false
+    @State var showingRatesList = false
 
     var body: some View {
         VStack {
-            if let sellingCurecny = vm.sellingCurrency {
-                CurrencySelector(inputField: $vm.sellingCurrencyValue,
+            if let sellingCurecny = vm.selectedCurrency {
+                CurrencySelector(inputField: $vm.sellingCurrencyValue, actionTitle: "Sell",
                                  currencyTitle: sellingCurecny.description,
                                  currencyCode: sellingCurecny.id, onCurrecnyTap: {
-                                     vm.showingCurrencyListForType = .sell
+                                     showingCurrencyList = true
                                  }, onEditing: { isEditing in
                                      vm.isSellingFieldEditing.send(isEditing)
                                  })
@@ -28,11 +30,11 @@ struct HomeScene: View {
             }.frame(height: 0.5)
                 .background(.gray)
 
-            if let buyingCurecny = vm.buyingCurrency {
-                CurrencySelector(inputField: $vm.buyingCurrencyValue,
+            if let buyingCurecny = vm.selectedRate {
+                CurrencySelector(inputField: $vm.buyingCurrencyValue, actionTitle: "Buy",
                                  currencyTitle: buyingCurecny.description,
                                  currencyCode: buyingCurecny.id, onCurrecnyTap: {
-                                     vm.showingCurrencyListForType = .buy
+                                     showingRatesList = true
                                  }, onEditing: { isEditing in
                                      vm.isBuyingFieldEditing.send(isEditing)
                                  })
@@ -46,9 +48,16 @@ struct HomeScene: View {
             })
         }
         .padding(.horizontal)
-        .sheet(isPresented: vm.bindingForShowingCurrencyList()) {
-            CurrencyList(selected: vm.selectedCurrecny(), currencies: vm.selectableList()) { currency in
-                vm.selected(curreny: currency)
+        .sheet(isPresented: $showingCurrencyList) {
+            CurrencyList(selected: vm.selectedCurrency, currencies: vm.currencyList) { id in
+                vm.selectedCurrency(id: id)
+                showingCurrencyList = false
+            }
+        }
+        .sheet(isPresented: $showingRatesList) {
+            CurrencyList(selected: vm.selectedRate, currencies: vm.rates) { id in
+                vm.selectedRate(id: id)
+                showingRatesList = false
             }
         }
     }
