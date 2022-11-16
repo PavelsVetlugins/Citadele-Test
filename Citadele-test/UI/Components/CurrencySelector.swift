@@ -12,6 +12,7 @@ struct CurrencySelector: View {
     @Binding var inputField: String
     let currencyTitle: String
     let currencyCode: String
+    let onCurrecnyTap: () -> Void
 
     var body: some View {
         VStack {
@@ -23,7 +24,7 @@ struct CurrencySelector: View {
 
             HStack {
                 Button(currencyCode, action: {
-                    // show selecotr
+                    onCurrecnyTap()
                 })
                 TextField("", text: $inputField)
                     .multilineTextAlignment(.trailing)
@@ -35,6 +36,6 @@ struct CurrencySelector: View {
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(inputField: .constant(""), currencyTitle: "Euro", currencyCode: "EUR")
+        CurrencySelector(inputField: .constant(""), currencyTitle: "Euro", currencyCode: "EUR", onCurrecnyTap: {})
     }
 }

@@ -18,7 +18,9 @@ struct HomeScene: View {
             if let sellingCurecny = vm.sellingCurrency {
                 CurrencySelector(inputField: $sellAmount,
                                  currencyTitle: sellingCurecny.description,
-                                 currencyCode: sellingCurecny.id)
+                                 currencyCode: sellingCurecny.id, onCurrecnyTap: {
+                                     vm.showingCurrencyListForType = .sell
+                                 })
             }
 
             HStack {
@@ -29,7 +31,9 @@ struct HomeScene: View {
             if let buyingCurecny = vm.buyingCurrency {
                 CurrencySelector(inputField: $buyAmount,
                                  currencyTitle: buyingCurecny.description,
-                                 currencyCode: buyingCurecny.id)
+                                 currencyCode: buyingCurecny.id, onCurrecnyTap: {
+                                     vm.showingCurrencyListForType = .buy
+                                 })
             }
 
             Toggle(isOn: $isNonCash, label: {
@@ -40,6 +44,11 @@ struct HomeScene: View {
             })
         }
         .padding(.horizontal)
+        .sheet(isPresented: vm.bindingForShowingCurrencyList()) {
+            CurrencyList(selected: vm.selectedCurrecny(), currencies: vm.selectableList()) { currency in
+                vm.selected(curreny: currency)
+            }
+        }
     }
 }
 
