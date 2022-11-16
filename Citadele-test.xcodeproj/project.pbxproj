@@ -14,6 +14,9 @@
 		4192574D2924CFB000668023 /* Citadele_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192574C2924CFB000668023 /* Citadele_testTests.swift */; };
 		419257572924CFB000668023 /* Citadele_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257562924CFB000668023 /* Citadele_testUITests.swift */; };
 		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
+		D2B05DF4553B5602A970B24B /* Pods_Citadele_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */; };
+		DE5B4C891BF790AB6DD04D57 /* Pods_Citadele_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */; };
+		FC5BE985D799F20692CA470C /* Pods_Citadele_test_Citadele_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6B52B83B7D0AFE13805E16 /* Pods-Citadele-test-Citadele-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.release.xcconfig"; sourceTree = "<group>"; };
+		151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_test_Citadele_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21AE00C05190E6928CAE3D76 /* Pods-Citadele-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-testTests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-testTests/Pods-Citadele-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		419257372924CFAE00668023 /* Citadele-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Citadele-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4192573A2924CFAE00668023 /* Citadele_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testApp.swift; sourceTree = "<group>"; };
 		4192573C2924CFAE00668023 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +51,12 @@
 		419257522924CFB000668023 /* Citadele-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Citadele-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419257562924CFB000668023 /* Citadele_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITests.swift; sourceTree = "<group>"; };
 		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test/Pods-Citadele-test.release.xcconfig"; sourceTree = "<group>"; };
+		AF9ECCAC873F261D95DE43BA /* Pods-Citadele-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-test/Pods-Citadele-test.debug.xcconfig"; sourceTree = "<group>"; };
+		BDC4B74446BBDB20155B935B /* Pods-Citadele-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-testTests.release.xcconfig"; path = "Target Support Files/Pods-Citadele-testTests/Pods-Citadele-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B05DF4553B5602A970B24B /* Pods_Citadele_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5B4C891BF790AB6DD04D57 /* Pods_Citadele_testTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5BE985D799F20692CA470C /* Pods_Citadele_test_Citadele_testUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,8 @@
 				4192574B2924CFB000668023 /* Citadele-testTests */,
 				419257552924CFB000668023 /* Citadele-testUITests */,
 				419257382924CFAE00668023 /* Products */,
+				4BF5C6AC01FC85B085487653 /* Pods */,
+				51FE855B8E7D38DF8E18C6BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +146,29 @@
 			path = "Citadele-testUITests";
 			sourceTree = "<group>";
 		};
+		4BF5C6AC01FC85B085487653 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF9ECCAC873F261D95DE43BA /* Pods-Citadele-test.debug.xcconfig */,
+				AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */,
+				918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */,
+				0F6B52B83B7D0AFE13805E16 /* Pods-Citadele-test-Citadele-testUITests.release.xcconfig */,
+				21AE00C05190E6928CAE3D76 /* Pods-Citadele-testTests.debug.xcconfig */,
+				BDC4B74446BBDB20155B935B /* Pods-Citadele-testTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		51FE855B8E7D38DF8E18C6BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */,
+				151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */,
+				52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4192575C2924CFB000668023 /* Build configuration list for PBXNativeTarget "Citadele-test" */;
 			buildPhases = (
+				D493DB69064AC731096E94F4 /* [CP] Check Pods Manifest.lock */,
+				419257652924D2D300668023 /* Swift format */,
 				419257332924CFAE00668023 /* Sources */,
 				419257342924CFAE00668023 /* Frameworks */,
 				419257352924CFAE00668023 /* Resources */,
+				F4BD142BDF0EC244104891B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4192575F2924CFB000668023 /* Build configuration list for PBXNativeTarget "Citadele-testTests" */;
 			buildPhases = (
+				E52BA527076650DE4F28895B /* [CP] Check Pods Manifest.lock */,
 				419257442924CFB000668023 /* Sources */,
 				419257452924CFB000668023 /* Frameworks */,
 				419257462924CFB000668023 /* Resources */,
@@ -171,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 419257622924CFB000668023 /* Build configuration list for PBXNativeTarget "Citadele-testUITests" */;
 			buildPhases = (
+				3135BBE4C5BDF4E1B8B6BE56 /* [CP] Check Pods Manifest.lock */,
 				4192574E2924CFB000668023 /* Sources */,
 				4192574F2924CFB000668023 /* Frameworks */,
 				419257502924CFB000668023 /* Resources */,
+				B8D3F7E72B53AD355DD7E8D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,127 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3135BBE4C5BDF4E1B8B6BE56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Citadele-test-Citadele-testUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		419257652924D2D300668023 /* Swift format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\" \"--config\" \"$SRCROOT/config.swiftformat\"\n";
+		};
+		B8D3F7E72B53AD355DD7E8D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D493DB69064AC731096E94F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Citadele-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E52BA527076650DE4F28895B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Citadele-testTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BD142BDF0EC244104891B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Citadele-test/Pods-Citadele-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Citadele-test/Pods-Citadele-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Citadele-test/Pods-Citadele-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		419257332924CFAE00668023 /* Sources */ = {
@@ -408,6 +575,7 @@
 		};
 		4192575D2924CFB000668023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF9ECCAC873F261D95DE43BA /* Pods-Citadele-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,7 +595,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -435,15 +603,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pavel.citadele.test.Citadele-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4192575E2924CFB000668023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,7 +634,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -471,15 +642,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pavel.citadele.test.Citadele-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		419257602924CFB000668023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21AE00C05190E6928CAE3D76 /* Pods-Citadele-testTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +676,7 @@
 		};
 		419257612924CFB000668023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC4B74446BBDB20155B935B /* Pods-Citadele-testTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +699,7 @@
 		};
 		419257632924CFB000668023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -545,6 +721,7 @@
 		};
 		419257642924CFB000668023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6B52B83B7D0AFE13805E16 /* Pods-Citadele-test-Citadele-testUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

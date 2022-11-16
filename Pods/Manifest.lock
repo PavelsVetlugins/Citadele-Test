@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.6.2)
+  - SwiftFormat/CLI (0.50.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftFormat/CLI (~> 0.49)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftFormat
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  SwiftFormat: 61cda3819dc3a7d69795ce0430e1e1d53c4a4fb2
+
+PODFILE CHECKSUM: a495a05d5ad37f03d433c67061c0d08af2912291
+
+COCOAPODS: 1.11.0

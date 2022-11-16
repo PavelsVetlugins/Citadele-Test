@@ -8,7 +8,6 @@
 import XCTest
 
 final class Citadele_testUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

@@ -1,0 +1,3 @@
+--disable redundantSelf,enumNamespaces,sortedSwitchCases,hoistPatternLet
+--stripunusedargs "closure-only"
+--swiftversion 5
