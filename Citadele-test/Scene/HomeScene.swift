@@ -11,21 +11,26 @@ struct HomeScene: View {
     @State var buyAmount: String = "0"
     @State var sellAmount: String = "0"
     @State var isNonCash: Bool = false
+    @StateObject var vm = CurrencyConverterVM()
 
     var body: some View {
         VStack {
-            CurrencySelector(inputField: $sellAmount,
-                             currencyTitle: "Euro",
-                             currencyCode: "EUR")
+            if let sellingCurecny = vm.sellingCurrency {
+                CurrencySelector(inputField: $sellAmount,
+                                 currencyTitle: sellingCurecny.description,
+                                 currencyCode: sellingCurecny.id)
+            }
 
             HStack {
                 Spacer()
             }.frame(height: 0.5)
                 .background(.gray)
 
-            CurrencySelector(inputField: $buyAmount,
-                             currencyTitle: "US Dollar",
-                             currencyCode: "USD")
+            if let buyingCurecny = vm.buyingCurrency {
+                CurrencySelector(inputField: $buyAmount,
+                                 currencyTitle: buyingCurecny.description,
+                                 currencyCode: buyingCurecny.id)
+            }
 
             Toggle(isOn: $isNonCash, label: {
                 HStack {

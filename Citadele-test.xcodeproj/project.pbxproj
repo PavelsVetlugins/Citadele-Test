@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		414336CC2925015000696104 /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336CB2925015000696104 /* CurrencySelector.swift */; };
+		414336CE2925026C00696104 /* CurrencyConverterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336CD2925026C00696104 /* CurrencyConverterVM.swift */; };
+		414336D1292502B900696104 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336D0292502B900696104 /* HttpRequest.swift */; };
+		414336D3292503A800696104 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336D2292503A800696104 /* Config.swift */; };
+		414336D52925040700696104 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336D42925040700696104 /* HttpService.swift */; };
+		414336D72925042F00696104 /* CurrencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336D62925042F00696104 /* CurrencyRequest.swift */; };
+		414336DA292508DD00696104 /* CurrateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336D9292508DD00696104 /* CurrateResponse.swift */; };
+		414336DD29250F2700696104 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336DC29250F2700696104 /* Collection+.swift */; };
 		4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192573A2924CFAE00668023 /* Citadele_testApp.swift */; };
 		4192573F2924CFB000668023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4192573E2924CFB000668023 /* Assets.xcassets */; };
 		419257432924CFB000668023 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419257422924CFB000668023 /* Preview Assets.xcassets */; };
@@ -42,6 +49,13 @@
 		151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_test_Citadele_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AE00C05190E6928CAE3D76 /* Pods-Citadele-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-testTests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-testTests/Pods-Citadele-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		414336CB2925015000696104 /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
+		414336CD2925026C00696104 /* CurrencyConverterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterVM.swift; sourceTree = "<group>"; };
+		414336D0292502B900696104 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		414336D2292503A800696104 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		414336D42925040700696104 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		414336D62925042F00696104 /* CurrencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRequest.swift; sourceTree = "<group>"; };
+		414336D9292508DD00696104 /* CurrateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrateResponse.swift; sourceTree = "<group>"; };
+		414336DC29250F2700696104 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		419257372924CFAE00668023 /* Citadele-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Citadele-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4192573A2924CFAE00668023 /* Citadele_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testApp.swift; sourceTree = "<group>"; };
 		4192573E2924CFB000668023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +103,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414336CF2925029F00696104 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				414336D8292508D100696104 /* Model */,
+				414336D0292502B900696104 /* HttpRequest.swift */,
+				414336D42925040700696104 /* HttpService.swift */,
+				414336D62925042F00696104 /* CurrencyRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		414336D8292508D100696104 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				414336D9292508DD00696104 /* CurrateResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		414336DB29250F1A00696104 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				414336DC29250F2700696104 /* Collection+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4192572E2924CFAE00668023 = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +155,15 @@
 		419257392924CFAE00668023 /* Citadele-test */ = {
 			isa = PBXGroup;
 			children = (
+				414336DB29250F1A00696104 /* Utils */,
+				414336CF2925029F00696104 /* Networking */,
 				419257662924D34800668023 /* Scene */,
 				4192576C292500EC00668023 /* UI */,
 				4192573A2924CFAE00668023 /* Citadele_testApp.swift */,
 				4192573E2924CFB000668023 /* Assets.xcassets */,
 				419257402924CFB000668023 /* Citadele_test.entitlements */,
 				419257412924CFB000668023 /* Preview Content */,
+				414336D2292503A800696104 /* Config.swift */,
 			);
 			path = "Citadele-test";
 			sourceTree = "<group>";
@@ -153,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				419257672924D35B00668023 /* HomeScene.swift */,
+				414336CD2925026C00696104 /* CurrencyConverterVM.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -454,8 +499,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				419257682924D35B00668023 /* HomeScene.swift in Sources */,
+				414336DD29250F2700696104 /* Collection+.swift in Sources */,
+				414336DA292508DD00696104 /* CurrateResponse.swift in Sources */,
+				414336D1292502B900696104 /* HttpRequest.swift in Sources */,
 				414336CC2925015000696104 /* CurrencySelector.swift in Sources */,
+				414336CE2925026C00696104 /* CurrencyConverterVM.swift in Sources */,
+				414336D72925042F00696104 /* CurrencyRequest.swift in Sources */,
 				4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */,
+				414336D3292503A800696104 /* Config.swift in Sources */,
+				414336D52925040700696104 /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
