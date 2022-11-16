@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414336CC2925015000696104 /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336CB2925015000696104 /* CurrencySelector.swift */; };
 		4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192573A2924CFAE00668023 /* Citadele_testApp.swift */; };
-		4192573D2924CFAE00668023 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192573C2924CFAE00668023 /* ContentView.swift */; };
 		4192573F2924CFB000668023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4192573E2924CFB000668023 /* Assets.xcassets */; };
 		419257432924CFB000668023 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419257422924CFB000668023 /* Preview Assets.xcassets */; };
 		4192574D2924CFB000668023 /* Citadele_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192574C2924CFB000668023 /* Citadele_testTests.swift */; };
 		419257572924CFB000668023 /* Citadele_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257562924CFB000668023 /* Citadele_testUITests.swift */; };
 		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
+		419257682924D35B00668023 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257672924D35B00668023 /* HomeScene.swift */; };
 		D2B05DF4553B5602A970B24B /* Pods_Citadele_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */; };
 		DE5B4C891BF790AB6DD04D57 /* Pods_Citadele_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */; };
 		FC5BE985D799F20692CA470C /* Pods_Citadele_test_Citadele_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */; };
@@ -40,9 +41,9 @@
 		0F6B52B83B7D0AFE13805E16 /* Pods-Citadele-test-Citadele-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_test_Citadele_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AE00C05190E6928CAE3D76 /* Pods-Citadele-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-testTests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-testTests/Pods-Citadele-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		414336CB2925015000696104 /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
 		419257372924CFAE00668023 /* Citadele-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Citadele-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4192573A2924CFAE00668023 /* Citadele_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testApp.swift; sourceTree = "<group>"; };
-		4192573C2924CFAE00668023 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4192573E2924CFB000668023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		419257402924CFB000668023 /* Citadele_test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Citadele_test.entitlements; sourceTree = "<group>"; };
 		419257422924CFB000668023 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		419257522924CFB000668023 /* Citadele-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Citadele-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419257562924CFB000668023 /* Citadele_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITests.swift; sourceTree = "<group>"; };
 		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		419257672924D35B00668023 /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test/Pods-Citadele-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,8 +114,9 @@
 		419257392924CFAE00668023 /* Citadele-test */ = {
 			isa = PBXGroup;
 			children = (
+				419257662924D34800668023 /* Scene */,
+				4192576C292500EC00668023 /* UI */,
 				4192573A2924CFAE00668023 /* Citadele_testApp.swift */,
-				4192573C2924CFAE00668023 /* ContentView.swift */,
 				4192573E2924CFB000668023 /* Assets.xcassets */,
 				419257402924CFB000668023 /* Citadele_test.entitlements */,
 				419257412924CFB000668023 /* Preview Content */,
@@ -144,6 +147,30 @@
 				419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */,
 			);
 			path = "Citadele-testUITests";
+			sourceTree = "<group>";
+		};
+		419257662924D34800668023 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				419257672924D35B00668023 /* HomeScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		4192576C292500EC00668023 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4192576D292500FC00668023 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4192576D292500FC00668023 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				414336CB2925015000696104 /* CurrencySelector.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4BF5C6AC01FC85B085487653 /* Pods */ = {
@@ -426,7 +453,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4192573D2924CFAE00668023 /* ContentView.swift in Sources */,
+				419257682924D35B00668023 /* HomeScene.swift in Sources */,
+				414336CC2925015000696104 /* CurrencySelector.swift in Sources */,
 				4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
