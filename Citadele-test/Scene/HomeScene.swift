@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeScene: View {
-    @State var isNonCash: Bool = false
     @StateObject var vm = CurrencyConverterVM()
     @State var showingCurrencyList = false
     @State var showingRatesList = false
@@ -40,12 +39,12 @@ struct HomeScene: View {
                                  })
             }
 
-            Toggle(isOn: $isNonCash, label: {
+            Toggle(isOn: $vm.useNonCashRate, label: {
                 HStack {
                     Spacer()
                     Text("Non cash rate")
                 }
-            })
+            }).disabled(!vm.isNonCashAvailable)
         }
         .padding(.horizontal)
         .sheet(isPresented: $showingCurrencyList) {

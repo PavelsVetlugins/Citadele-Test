@@ -18,6 +18,9 @@ final class CurrencyConverterVM: ObservableObject {
     @Published var buyingCurrencyValue: String = ""
     public var isBuyingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
 
+    @Published var useNonCashRate: Bool = true
+    @Published var isNonCashAvailable: Bool = true
+
     private let _currencyList: CurrentValueSubject<[Currency], Never> = .init([])
     public var currencyList: [Currency] { _currencyList.value }
     public var rates: [Rate] { selectedCurrency.rates }
@@ -50,9 +53,19 @@ final class CurrencyConverterVM: ObservableObject {
             .assign(to: \.selectedRate, on: self)
             .store(in: &store)
 
-        let sellRate = $selectedRate
-            .compactMap { rate -> Double? in
-                guard let sell = rate.sellTransfer,
+        $selectedRate.map { $0.buyRate != nil && $0.sellRate != nil }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.isNonCashAvailable, on: self)
+            .store(in: &store)
+
+        $isNonCashAvailable.filter { $0 == false }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.useNonCashRate, on: self)
+            .store(in: &store)
+
+        let sellRate = $selectedRate.combineLatest($useNonCashRate)
+            .compactMap { rate, useNonCashRate -> Double? in
+                guard let sell = useNonCashRate ? rate.sellTransfer : rate.sellRate,
                       let sellValue = Double(sell) else { return nil }
                 if self.selectedCurrency.reverseUsdQuot, rate.currency == "USD" {
                     return 1 / sellValue
