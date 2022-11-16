@@ -38,6 +38,8 @@ final class CurrencyConverterVM: ObservableObject {
     }
 
     private func bind() {
+        cleanseInputBinding()
+
         _currencyList.compactMap { $0[safe: 0] }
             .receive(on: DispatchQueue.main)
             .assign(to: \.selectedCurrency, on: self)
@@ -94,6 +96,54 @@ final class CurrencyConverterVM: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: \.sellingCurrencyValue, on: self)
             .store(in: &store)
+    }
+
+    private func cleanseInputBinding() {
+        // SwiftUI does not provid ability to edit user input on the fly, hecne its the only way to cleanse user input using SwiftUI TextView.
+        $sellingCurrencyValue
+            .withLatestFrom(isSellingFieldEditing)
+            .filter { $1 == true }
+            .map { value, _ in value }
+            .debounce(for: .milliseconds(10), scheduler: RunLoop.main)
+            .sink(receiveValue: { [weak self] value in
+                guard let self else { return }
+
+                let cleansedValue = self.cleanseInput(input: value)
+                if value != cleansedValue {
+                    self.sellingCurrencyValue = cleansedValue
+                }
+            })
+            .store(in: &store)
+
+        $buyingCurrencyValue
+            .withLatestFrom(isBuyingFieldEditing)
+            .filter { $1 == true }
+            .map { value, _ in value }
+            .debounce(for: .milliseconds(10), scheduler: RunLoop.main)
+            .sink(receiveValue: { [weak self] value in
+                guard let self else { return }
+
+                let cleansedValue = self.cleanseInput(input: value)
+                if value != cleansedValue {
+                    self.buyingCurrencyValue = cleansedValue
+                }
+            })
+            .store(in: &store)
+    }
+
+    private func cleanseInput(input: String) -> String {
+        var cleansedValue = input
+        cleansedValue = cleansedValue.filter("0123456789.".contains)
+        if cleansedValue.starts(with: ".") {
+            cleansedValue.removeFirst()
+        }
+        if cleansedValue.filter({ $0 == "." }).count > 1,
+           let index = cleansedValue.lastIndex(of: ".")
+        {
+            cleansedValue.remove(at: index)
+        }
+
+        return cleansedValue
     }
 
     public func selectedCurrency(id: String) {

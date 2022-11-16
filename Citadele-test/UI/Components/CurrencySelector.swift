@@ -28,7 +28,7 @@ struct CurrencySelector: View {
                 Button(currencyCode, action: {
                     onCurrecnyTap()
                 })
-                TextField("0", text: $inputField, onEditingChanged: onEditing)
+                TextField("Specify amount", text: $inputField, onEditingChanged: onEditing)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
             }
