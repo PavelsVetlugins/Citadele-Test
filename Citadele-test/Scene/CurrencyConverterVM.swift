@@ -16,7 +16,13 @@ enum ListType {
 
 final class CurrencyConverterVM: ObservableObject {
     @Published var sellingCurrency: Currency? = nil
+    @Published var sellingCurrencyValue: String = ""
+    public var isSellingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
+
     @Published var buyingCurrency: Currency? = nil
+    @Published var buyingCurrencyValue: String = ""
+    public var isBuyingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
+
     @Published var showingCurrencyListForType: ListType? = nil
 
     private let _currencyList: CurrentValueSubject<[Currency], Never> = .init([])
@@ -46,12 +52,34 @@ final class CurrencyConverterVM: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: \.buyingCurrency, on: self)
             .store(in: &store)
+
+        $sellingCurrencyValue
+            .withLatestFrom(isBuyingFieldEditing)
+            .filter { $1 == false }
+            .map { input, _ in
+                "\((Decimal(string: input) ?? 0) * 2)"
+            }
+            .assign(to: \.buyingCurrencyValue, on: self)
+            .store(in: &store)
+
+        $buyingCurrencyValue
+            .withLatestFrom(isSellingFieldEditing)
+            .filter { $1 == false }
+            .map { input, _ in
+                "\((Decimal(string: input) ?? 0) * 2)"
+            }
+            .assign(to: \.sellingCurrencyValue, on: self)
+            .store(in: &store)
     }
 
     public func bindingForShowingCurrencyList() -> Binding<Bool> {
         .init {
             self.showingCurrencyListForType != nil
-        } set: { _ in }
+        } set: { newValue in
+            if !newValue {
+                self.showingCurrencyListForType = nil
+            }
+        }
     }
 
     public func selected(curreny: Currency) {

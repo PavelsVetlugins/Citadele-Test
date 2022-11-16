@@ -16,6 +16,7 @@
 		414336DA292508DD00696104 /* CurrateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336D9292508DD00696104 /* CurrateResponse.swift */; };
 		414336DD29250F2700696104 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336DC29250F2700696104 /* Collection+.swift */; };
 		414336DF2925129B00696104 /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336DE2925129B00696104 /* CurrencyList.swift */; };
+		414336E129253FE400696104 /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414336E029253FE400696104 /* Publisher+.swift */; };
 		4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192573A2924CFAE00668023 /* Citadele_testApp.swift */; };
 		4192573F2924CFB000668023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4192573E2924CFB000668023 /* Assets.xcassets */; };
 		419257432924CFB000668023 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419257422924CFB000668023 /* Preview Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		414336D9292508DD00696104 /* CurrateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrateResponse.swift; sourceTree = "<group>"; };
 		414336DC29250F2700696104 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		414336DE2925129B00696104 /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
+		414336E029253FE400696104 /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 		419257372924CFAE00668023 /* Citadele-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Citadele-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4192573A2924CFAE00668023 /* Citadele_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testApp.swift; sourceTree = "<group>"; };
 		4192573E2924CFB000668023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				414336DC29250F2700696104 /* Collection+.swift */,
+				414336E029253FE400696104 /* Publisher+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419257682924D35B00668023 /* HomeScene.swift in Sources */,
+				414336E129253FE400696104 /* Publisher+.swift in Sources */,
 				414336DD29250F2700696104 /* Collection+.swift in Sources */,
 				414336DA292508DD00696104 /* CurrateResponse.swift in Sources */,
 				414336D1292502B900696104 /* HttpRequest.swift in Sources */,

@@ -27,3 +27,9 @@ extension Currency {
         Currency(id: "EUR", description: "Euro", reverseUsdQuot: true, rates: [Rate(currency: "USD", description: "US Dollar", sellRate: "1.222", buyRate: "1.111", sellTransfer: "1.3", buyTransfer: "1,25")])
     }
 }
+
+extension Rate {
+    var currencyNumber: Decimal {
+        Decimal(string: currency) ?? 0
+    }
+}

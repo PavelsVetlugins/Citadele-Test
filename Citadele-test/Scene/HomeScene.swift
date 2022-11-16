@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct HomeScene: View {
-    @State var buyAmount: String = "0"
-    @State var sellAmount: String = "0"
     @State var isNonCash: Bool = false
     @StateObject var vm = CurrencyConverterVM()
 
     var body: some View {
         VStack {
             if let sellingCurecny = vm.sellingCurrency {
-                CurrencySelector(inputField: $sellAmount,
+                CurrencySelector(inputField: $vm.sellingCurrencyValue,
                                  currencyTitle: sellingCurecny.description,
                                  currencyCode: sellingCurecny.id, onCurrecnyTap: {
                                      vm.showingCurrencyListForType = .sell
+                                 }, onEditing: { isEditing in
+                                     vm.isSellingFieldEditing.send(isEditing)
                                  })
             }
 
@@ -29,10 +29,12 @@ struct HomeScene: View {
                 .background(.gray)
 
             if let buyingCurecny = vm.buyingCurrency {
-                CurrencySelector(inputField: $buyAmount,
+                CurrencySelector(inputField: $vm.buyingCurrencyValue,
                                  currencyTitle: buyingCurecny.description,
                                  currencyCode: buyingCurecny.id, onCurrecnyTap: {
                                      vm.showingCurrencyListForType = .buy
+                                 }, onEditing: { isEditing in
+                                     vm.isBuyingFieldEditing.send(isEditing)
                                  })
             }
 

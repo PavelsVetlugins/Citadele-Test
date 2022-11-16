@@ -13,6 +13,7 @@ struct CurrencySelector: View {
     let currencyTitle: String
     let currencyCode: String
     let onCurrecnyTap: () -> Void
+    let onEditing: (Bool) -> Void
 
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct CurrencySelector: View {
                 Button(currencyCode, action: {
                     onCurrecnyTap()
                 })
-                TextField("", text: $inputField)
+                TextField("0", text: $inputField, onEditingChanged: onEditing)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
             }
@@ -36,6 +37,6 @@ struct CurrencySelector: View {
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(inputField: .constant(""), currencyTitle: "Euro", currencyCode: "EUR", onCurrecnyTap: {})
+        CurrencySelector(inputField: .constant(""), currencyTitle: "Euro", currencyCode: "EUR", onCurrecnyTap: {}, onEditing: { _ in })
     }
 }
