@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 
 final class CurrencyConverterVM: ObservableObject {
+    private var store = Set<AnyCancellable>()
+
     @Published var selectedCurrency: Currency = .empty()
     @Published var sellingCurrencyValue: String = ""
     public var isSellingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
@@ -18,6 +20,7 @@ final class CurrencyConverterVM: ObservableObject {
     @Published var buyingCurrencyValue: String = ""
     public var isBuyingFieldEditing: CurrentValueSubject<Bool, Never> = .init(false)
 
+    @Published var isLoading: Bool = true
     @Published var useNonCashRate: Bool = true
     @Published var isNonCashAvailable: Bool = true
     @Published var isSelling: Bool = true
@@ -26,10 +29,15 @@ final class CurrencyConverterVM: ObservableObject {
     public var currencyList: [Currency] { _currencyList.value }
     public var rates: [Rate] { selectedCurrency.rates }
 
-    var store = Set<AnyCancellable>()
+    // MARK: - Dependancies
 
-    init() {
+    private let alertManager: AlertManager
+
+    init(diContainer: DIContainerProtocol = DIContainer.shared) {
+        self.alertManager = diContainer.resolve()!
+
         bind()
+        fetchRates()
     }
 
     private func bind() {
@@ -144,14 +152,20 @@ final class CurrencyConverterVM: ObservableObject {
             })
             .store(in: &store)
     }
-    
+
     private func fetchRates() {
+        isLoading = true
         let currateRequest: AnyPublisher<CurrateResponse, Error> = HttpService().fetchRequest(CurrencyRequest())
 
-        currateRequest.sink(receiveCompletion: { error in
-            print("+++ \(error)")
-        }, receiveValue: { result in
-            self._currencyList.send(result.data)
+        currateRequest.sink(receiveCompletion: { [weak self] result in
+            if case .failure = result {
+                self?.alertManager.presentAlert(infoAlert: NetworkError(onRetry: { [weak self] in
+                    self?.fetchRates()
+                }))
+            }
+        }, receiveValue: { [weak self] result in
+            self?._currencyList.send(result.data)
+            self?.isLoading = false
         })
         .store(in: &store)
     }

@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct Citadele_testApp: App {
+    @ObservedObject var alertManager = AlertManager()
+
+    init() {
+        appLaunch()
+    }
+
     var body: some Scene {
         WindowGroup {
             HomeScene()
+                .alert(isPresented: $alertManager.isPresented) {
+                    alertManager.alert
+                }
         }
+    }
+
+    private func appLaunch() {
+        DIContainer.shared.register(type: AlertManager.self, component: alertManager)
     }
 }

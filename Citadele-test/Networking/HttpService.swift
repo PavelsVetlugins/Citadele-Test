@@ -17,7 +17,7 @@ class HttpService: HttpServiceProviding {
     // Input data
     func fetchRequest<T: Decodable>(_ request: HttpRequest) -> AnyPublisher<T, Error> {
         return Future { promise in
-            AF.request(request).response { response in
+            AF.request(request).validate().response { response in
                 if let error = response.error {
                     promise(.failure(error))
                 }
