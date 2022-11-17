@@ -1,0 +1,256 @@
+{
+    "data": [
+        {
+            "id": "AUD",
+            "description": "Australian Dollar",
+            "reverseUsdQuot": true,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellRate": "1.485",
+                    "buyRate": "1.585",
+                    "sellTransfer": "1.4972",
+                    "buyTransfer": "1.5743"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellRate": "0.653",
+                    "buyRate": "0.7",
+                    "sellTransfer": "0.659",
+                    "buyTransfer": "0.6929"
+                }
+            ]
+        },
+        {
+            "id": "CAD",
+            "description": "Canadian Dollar",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellTransfer": "1.344",
+                    "buyTransfer": "1.413"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellTransfer": "1.295",
+                    "buyTransfer": "1.361"
+                }
+            ]
+        },
+        {
+            "id": "CHF",
+            "description": "Swiss Franc",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellTransfer": "0.956",
+                    "buyTransfer": "1.006"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellTransfer": "0.921",
+                    "buyTransfer": "0.969"
+                }
+            ]
+        },
+        {
+            "id": "CNY",
+            "description": "Chinese yuan renminbi",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellTransfer": "7.1638",
+                    "buyTransfer": "7.5345"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellTransfer": "6.9029",
+                    "buyTransfer": "7.2573"
+                }
+            ]
+        },
+        {
+            "id": "CZK",
+            "description": "Czech Koruna",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellTransfer": "23.84",
+                    "buyTransfer": "24.82"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellTransfer": "22.961",
+                    "buyTransfer": "23.908"
+                }
+            ]
+        },
+        {
+            "id": "DKK",
+            "description": "Danish Krone",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellTransfer": "7.29",
+                    "buyTransfer": "7.588"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellTransfer": "7.022",
+                    "buyTransfer": "7.31"
+                }
+            ]
+        },
+        {
+            "id": "GBP",
+            "description": "Pound Sterling",
+            "reverseUsdQuot": true,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellRate": "0.857",
+                    "buyRate": "0.896",
+                    "sellTransfer": "0.858",
+                    "buyTransfer": "0.894"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellRate": "1.155",
+                    "buyRate": "1.214",
+                    "sellTransfer": "1.161",
+                    "buyTransfer": "1.209"
+                }
+            ]
+        },
+        {
+            "id": "JPY",
+            "description": "Japanese Yen",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellTransfer": "141.4",
+                    "buyTransfer": "148.67"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellTransfer": "136.22",
+                    "buyTransfer": "143.21"
+                }
+            ]
+        },
+        {
+            "id": "NOK",
+            "description": "Norvegian Krone",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellRate": "10.145",
+                    "buyRate": "10.643",
+                    "sellTransfer": "10.157",
+                    "buyTransfer": "10.576"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellRate": "9.743",
+                    "buyRate": "10.279",
+                    "sellTransfer": "9.784",
+                    "buyTransfer": "10.189"
+                }
+            ]
+        },
+        {
+            "id": "PLN",
+            "description": "Poland Zlot New",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellRate": "4.556",
+                    "buyRate": "4.892",
+                    "sellTransfer": "4.598",
+                    "buyTransfer": "4.838"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellRate": "4.377",
+                    "buyRate": "4.725",
+                    "sellTransfer": "4.432",
+                    "buyTransfer": "4.661"
+                }
+            ]
+        },
+        {
+            "id": "SEK",
+            "description": "Swedish Krone",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellRate": "10.625",
+                    "buyRate": "11.144",
+                    "sellTransfer": "10.637",
+                    "buyTransfer": "11.073"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar",
+                    "sellRate": "10.204",
+                    "buyRate": "10.763",
+                    "sellTransfer": "10.247",
+                    "buyTransfer": "10.669"
+                }
+            ]
+        },
+        {
+            "id": "USD",
+            "description": "US Dollar",
+            "reverseUsdQuot": false,
+            "rates": [
+                {
+                    "currency": "EUR",
+                    "description": "Euro",
+                    "sellRate": "1.013",
+                    "buyRate": "1.064",
+                    "sellTransfer": "1.017",
+                    "buyTransfer": "1.059"
+                },
+                {
+                    "currency": "USD",
+                    "description": "US Dollar"
+                }
+            ]
+        }
+    ],
+    "actions": [],
+    "success": true,
+    "invalidated": false,
+    "exceptions": {}
+}

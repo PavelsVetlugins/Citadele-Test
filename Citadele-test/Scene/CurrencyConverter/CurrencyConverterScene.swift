@@ -106,6 +106,6 @@ struct CurrencyConverterScene: View {
 
 struct HomeScene_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyConverterScene(vm: CurrencyConverterVM())
+        CurrencyConverterScene(vm: CurrencyConverterVM(diContainer: DIContainerMock.previewMock()))
     }
 }

@@ -25,10 +25,13 @@
 		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
 		419257682924D35B00668023 /* CurrencyConverterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257672924D35B00668023 /* CurrencyConverterScene.swift */; };
 		41941F8C29254EC700B0CC9D /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */; };
+		41A7B4AF29265ED600E3238D /* CurrencyRateServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */; };
+		41A7B4B129265F0100E3238D /* DIContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4B029265F0100E3238D /* DIContainerMock.swift */; };
 		41CDBB37292638E100971D16 /* RateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB36292638E100971D16 /* RateCalculator.swift */; };
 		41CDBB3929263A4A00971D16 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3829263A4A00971D16 /* AlertManager.swift */; };
 		41CDBB3C29263ABF00971D16 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3B29263ABF00971D16 /* DIContainer.swift */; };
 		41CDBB3E29264B3400971D16 /* CurrencyRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3D29264B3400971D16 /* CurrencyRateService.swift */; };
+		41CDBB4129265BF500971D16 /* CurRateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 41CDBB4029265BF500971D16 /* CurRateResponse.json */; };
 		D2B05DF4553B5602A970B24B /* Pods_Citadele_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */; };
 		DE5B4C891BF790AB6DD04D57 /* Pods_Citadele_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */; };
 		FC5BE985D799F20692CA470C /* Pods_Citadele_test_Citadele_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */; };
@@ -77,10 +80,13 @@
 		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		419257672924D35B00668023 /* CurrencyConverterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterScene.swift; sourceTree = "<group>"; };
 		41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
+		41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateServiceMock.swift; sourceTree = "<group>"; };
+		41A7B4B029265F0100E3238D /* DIContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerMock.swift; sourceTree = "<group>"; };
 		41CDBB36292638E100971D16 /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		41CDBB3829263A4A00971D16 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		41CDBB3B29263ABF00971D16 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		41CDBB3D29264B3400971D16 /* CurrencyRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateService.swift; sourceTree = "<group>"; };
+		41CDBB4029265BF500971D16 /* CurRateResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurRateResponse.json; sourceTree = "<group>"; };
 		52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test/Pods-Citadele-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,11 +126,8 @@
 		414336CF2925029F00696104 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				414336D8292508D100696104 /* Model */,
 				414336D0292502B900696104 /* HttpRequest.swift */,
 				414336D42925040700696104 /* HttpService.swift */,
-				414336D62925042F00696104 /* CurrencyRequest.swift */,
-				41CDBB3D29264B3400971D16 /* CurrencyRateService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -174,7 +177,7 @@
 			children = (
 				41CDBB3A29263AB100971D16 /* Services */,
 				414336DB29250F1A00696104 /* Utils */,
-				414336CF2925029F00696104 /* Networking */,
+				41A7B4AD29265EA000E3238D /* CurrencyRate */,
 				419257662924D34800668023 /* Scene */,
 				4192576C292500EC00668023 /* UI */,
 				4192573A2924CFAE00668023 /* Citadele_testApp.swift */,
@@ -236,6 +239,27 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		41A7B4AD29265EA000E3238D /* CurrencyRate */ = {
+			isa = PBXGroup;
+			children = (
+				41CDBB3F29265B7500971D16 /* Response Samples */,
+				414336D8292508D100696104 /* Model */,
+				414336D62925042F00696104 /* CurrencyRequest.swift */,
+				41CDBB3D29264B3400971D16 /* CurrencyRateService.swift */,
+				41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */,
+			);
+			path = CurrencyRate;
+			sourceTree = "<group>";
+		};
+		41A7B4B229265F0F00E3238D /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				41CDBB3B29263ABF00971D16 /* DIContainer.swift */,
+				41A7B4B029265F0100E3238D /* DIContainerMock.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		41CDBB35292638B700971D16 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,9 +274,18 @@
 		41CDBB3A29263AB100971D16 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				41CDBB3B29263ABF00971D16 /* DIContainer.swift */,
+				414336CF2925029F00696104 /* Networking */,
+				41A7B4B229265F0F00E3238D /* DIContainer */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		41CDBB3F29265B7500971D16 /* Response Samples */ = {
+			isa = PBXGroup;
+			children = (
+				41CDBB4029265BF500971D16 /* CurRateResponse.json */,
+			);
+			path = "Response Samples";
 			sourceTree = "<group>";
 		};
 		4BF5C6AC01FC85B085487653 /* Pods */ = {
@@ -389,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419257432924CFB000668023 /* Preview Assets.xcassets in Resources */,
+				41CDBB4129265BF500971D16 /* CurRateResponse.json in Resources */,
 				4192573F2924CFB000668023 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,12 +579,14 @@
 				414336D1292502B900696104 /* HttpRequest.swift in Sources */,
 				414336CC2925015000696104 /* CurrencySelector.swift in Sources */,
 				414336CE2925026C00696104 /* CurrencyConverterVM.swift in Sources */,
+				41A7B4B129265F0100E3238D /* DIContainerMock.swift in Sources */,
 				414336D72925042F00696104 /* CurrencyRequest.swift in Sources */,
 				414336DF2925129B00696104 /* CurrencyList.swift in Sources */,
 				4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */,
 				41CDBB3C29263ABF00971D16 /* DIContainer.swift in Sources */,
 				41CDBB37292638E100971D16 /* RateCalculator.swift in Sources */,
 				414336D3292503A800696104 /* Config.swift in Sources */,
+				41A7B4AF29265ED600E3238D /* CurrencyRateServiceMock.swift in Sources */,
 				414336D52925040700696104 /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
