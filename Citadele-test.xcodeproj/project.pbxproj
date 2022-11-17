@@ -20,8 +20,6 @@
 		4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192573A2924CFAE00668023 /* Citadele_testApp.swift */; };
 		4192573F2924CFB000668023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4192573E2924CFB000668023 /* Assets.xcassets */; };
 		419257432924CFB000668023 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419257422924CFB000668023 /* Preview Assets.xcassets */; };
-		419257572924CFB000668023 /* Citadele_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257562924CFB000668023 /* Citadele_testUITests.swift */; };
-		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
 		419257682924D35B00668023 /* CurrencyConverterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257672924D35B00668023 /* CurrencyConverterScene.swift */; };
 		41941F8C29254EC700B0CC9D /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */; };
 		41A7B4AF29265ED600E3238D /* CurrencyRateServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */; };
@@ -80,8 +78,6 @@
 		419257422924CFB000668023 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		419257482924CFB000668023 /* Citadele-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Citadele-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419257522924CFB000668023 /* Citadele-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Citadele-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		419257562924CFB000668023 /* Citadele_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITests.swift; sourceTree = "<group>"; };
-		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		419257672924D35B00668023 /* CurrencyConverterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterScene.swift; sourceTree = "<group>"; };
 		41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
 		41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateServiceMock.swift; sourceTree = "<group>"; };
@@ -164,7 +160,6 @@
 			children = (
 				419257392924CFAE00668023 /* Citadele-test */,
 				4192574B2924CFB000668023 /* Citadele-testTests */,
-				419257552924CFB000668023 /* Citadele-testUITests */,
 				419257382924CFAE00668023 /* Products */,
 				4BF5C6AC01FC85B085487653 /* Pods */,
 				51FE855B8E7D38DF8E18C6BF /* Frameworks */,
@@ -214,15 +209,6 @@
 				41A7B4B929268E7400E3238D /* XCTestCase+.swift */,
 			);
 			path = "Citadele-testTests";
-			sourceTree = "<group>";
-		};
-		419257552924CFB000668023 /* Citadele-testUITests */ = {
-			isa = PBXGroup;
-			children = (
-				419257562924CFB000668023 /* Citadele_testUITests.swift */,
-				419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */,
-			);
-			path = "Citadele-testUITests";
 			sourceTree = "<group>";
 		};
 		419257662924D34800668023 /* Scene */ = {
@@ -619,8 +605,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				419257572924CFB000668023 /* Citadele_testUITests.swift in Sources */,
-				419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
