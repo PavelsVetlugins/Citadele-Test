@@ -25,6 +25,7 @@
 		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
 		419257682924D35B00668023 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257672924D35B00668023 /* HomeScene.swift */; };
 		41941F8C29254EC700B0CC9D /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */; };
+		41CDBB37292638E100971D16 /* RateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB36292638E100971D16 /* RateCalculator.swift */; };
 		D2B05DF4553B5602A970B24B /* Pods_Citadele_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52409872A26690ED6CA941C /* Pods_Citadele_test.framework */; };
 		DE5B4C891BF790AB6DD04D57 /* Pods_Citadele_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */; };
 		FC5BE985D799F20692CA470C /* Pods_Citadele_test_Citadele_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151B9B53B23E16D9D50ED1E1 /* Pods_Citadele_test_Citadele_testUITests.framework */; };
@@ -73,6 +74,7 @@
 		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		419257672924D35B00668023 /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
+		41CDBB36292638E100971D16 /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		52E50F94A7D1D4343757F3E9 /* Pods_Citadele_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Citadele_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C15B742B28F80D313ACBE /* Pods-Citadele-test-Citadele-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-Citadele-test-Citadele-testUITests/Pods-Citadele-test-Citadele-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD305BD229036B67B053FF3A /* Pods-Citadele-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citadele-test.release.xcconfig"; path = "Target Support Files/Pods-Citadele-test/Pods-Citadele-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,9 +206,7 @@
 		419257662924D34800668023 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				419257672924D35B00668023 /* HomeScene.swift */,
-				414336CD2925026C00696104 /* CurrencyConverterVM.swift */,
-				414336DE2925129B00696104 /* CurrencyList.swift */,
+				41CDBB35292638B700971D16 /* CurrencyConverter */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -225,6 +225,17 @@
 				414336CB2925015000696104 /* CurrencySelector.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		41CDBB35292638B700971D16 /* CurrencyConverter */ = {
+			isa = PBXGroup;
+			children = (
+				419257672924D35B00668023 /* HomeScene.swift */,
+				414336CD2925026C00696104 /* CurrencyConverterVM.swift */,
+				414336DE2925129B00696104 /* CurrencyList.swift */,
+				41CDBB36292638E100971D16 /* RateCalculator.swift */,
+			);
+			path = CurrencyConverter;
 			sourceTree = "<group>";
 		};
 		4BF5C6AC01FC85B085487653 /* Pods */ = {
@@ -518,6 +529,7 @@
 				414336D72925042F00696104 /* CurrencyRequest.swift in Sources */,
 				414336DF2925129B00696104 /* CurrencyList.swift in Sources */,
 				4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */,
+				41CDBB37292638E100971D16 /* RateCalculator.swift in Sources */,
 				414336D3292503A800696104 /* Config.swift in Sources */,
 				414336D52925040700696104 /* HttpService.swift in Sources */,
 			);

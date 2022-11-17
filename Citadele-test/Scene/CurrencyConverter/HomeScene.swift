@@ -14,26 +14,47 @@ struct HomeScene: View {
 
     var body: some View {
         VStack {
-            if let sellingCurecny = vm.selectedCurrency {
+            if vm.isSelling {
                 CurrencySelector(inputField: $vm.sellingCurrencyValue, actionTitle: "Sell",
-                                 currencyTitle: sellingCurecny.description,
-                                 currencyCode: sellingCurecny.id, onCurrecnyTap: {
+                                 currencyTitle: vm.selectedCurrency.description,
+                                 currencyCode: vm.selectedCurrency.id, onCurrecnyTap: {
                                      showingCurrencyList = true
+                                 }, onEditing: { isEditing in
+                                     vm.isSellingFieldEditing.send(isEditing)
+                                 })
+            } else {
+                CurrencySelector(inputField: $vm.sellingCurrencyValue, actionTitle: "Sell",
+                                 currencyTitle: vm.selectedRate.description,
+                                 currencyCode: vm.selectedRate.id, onCurrecnyTap: {
+                                     showingRatesList = true
                                  }, onEditing: { isEditing in
                                      vm.isSellingFieldEditing.send(isEditing)
                                  })
             }
 
-            HStack {
-                Spacer()
-            }.frame(height: 0.5)
-                .background(.gray)
+            ZStack {
+                HStack {
+                    Spacer()
+                }.frame(height: 0.5)
+                    .background(.gray)
+                Button(action: {
+                    vm.isSelling.toggle()
+                }, label: { Image(systemName: "arrow.up.arrow.down") })
+            }
 
-            if let buyingCurecny = vm.selectedRate {
+            if vm.isSelling {
                 CurrencySelector(inputField: $vm.buyingCurrencyValue, actionTitle: "Buy",
-                                 currencyTitle: buyingCurecny.description,
-                                 currencyCode: buyingCurecny.id, onCurrecnyTap: {
+                                 currencyTitle: vm.selectedRate.description,
+                                 currencyCode: vm.selectedRate.id, onCurrecnyTap: {
                                      showingRatesList = true
+                                 }, onEditing: { isEditing in
+                                     vm.isBuyingFieldEditing.send(isEditing)
+                                 })
+            } else {
+                CurrencySelector(inputField: $vm.buyingCurrencyValue, actionTitle: "Buy",
+                                 currencyTitle: vm.selectedCurrency.description,
+                                 currencyCode: vm.selectedCurrency.id, onCurrecnyTap: {
+                                     showingCurrencyList = true
                                  }, onEditing: { isEditing in
                                      vm.isBuyingFieldEditing.send(isEditing)
                                  })

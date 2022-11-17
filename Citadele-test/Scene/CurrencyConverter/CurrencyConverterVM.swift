@@ -20,6 +20,7 @@ final class CurrencyConverterVM: ObservableObject {
 
     @Published var useNonCashRate: Bool = true
     @Published var isNonCashAvailable: Bool = true
+    @Published var isSelling: Bool = true
 
     private let _currencyList: CurrentValueSubject<[Currency], Never> = .init([])
     public var currencyList: [Currency] { _currencyList.value }
@@ -63,14 +64,20 @@ final class CurrencyConverterVM: ObservableObject {
             .assign(to: \.useNonCashRate, on: self)
             .store(in: &store)
 
-        let sellRate = $selectedRate.combineLatest($useNonCashRate)
-            .compactMap { rate, useNonCashRate -> Double? in
-                guard let sell = useNonCashRate ? rate.sellTransfer : rate.sellRate,
+        let sellRate = $selectedRate.combineLatest($useNonCashRate, $isSelling)
+            .compactMap { [weak self] rate, useNonCashRate, isSelling -> RateCalculator? in
+                guard let self,
+                      let sell = useNonCashRate ? rate.buyTransfer : rate.buyRate,
+                      let buy = useNonCashRate ? rate.sellTransfer : rate.sellRate,
+                      let buyValue = Double(buy),
                       let sellValue = Double(sell) else { return nil }
-                if self.selectedCurrency.reverseUsdQuot, rate.currency == "USD" {
-                    return 1 / sellValue
-                }
-                return sellValue
+
+                let rateCalculator = RateCalculator(sellRate: sellValue,
+                                                    buyRate: buyValue,
+                                                    isSelling: isSelling,
+                                                    isReverseUsdQuot: self.selectedCurrency.reverseUsdQuot,
+                                                    isUSDCurrency: rate.currency == "USD")
+                return rateCalculator
             }
             .share()
 
@@ -85,8 +92,8 @@ final class CurrencyConverterVM: ObservableObject {
             .share()
 
         triggerSellCalculation
-            .map { amount, _, rate in
-                CurrencyFormatter.asCurrency(price: amount / rate) ?? ""
+            .map { amount, _, calculator in
+                calculator.calculateRate(amount: amount)
             }
             .receive(on: DispatchQueue.main)
             .assign(to: \.buyingCurrencyValue, on: self)
@@ -103,8 +110,8 @@ final class CurrencyConverterVM: ObservableObject {
             .share()
 
         triggerBuyCalculation
-            .map { amount, rate in
-                CurrencyFormatter.asCurrency(price: amount * rate) ?? ""
+            .map { amount, calculator in
+                calculator.calculateRate(amount: amount)
             }
             .receive(on: DispatchQueue.main)
             .assign(to: \.sellingCurrencyValue, on: self)
