@@ -126,6 +126,7 @@
 		414336CF2925029F00696104 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				41A7B4AD29265EA000E3238D /* CurrencyRate */,
 				414336D0292502B900696104 /* HttpRequest.swift */,
 				414336D42925040700696104 /* HttpService.swift */,
 			);
@@ -177,7 +178,6 @@
 			children = (
 				41CDBB3A29263AB100971D16 /* Services */,
 				414336DB29250F1A00696104 /* Utils */,
-				41A7B4AD29265EA000E3238D /* CurrencyRate */,
 				419257662924D34800668023 /* Scene */,
 				4192576C292500EC00668023 /* UI */,
 				4192573A2924CFAE00668023 /* Citadele_testApp.swift */,
