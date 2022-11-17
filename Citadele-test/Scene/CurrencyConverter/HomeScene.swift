@@ -14,6 +14,30 @@ struct HomeScene: View {
 
     var body: some View {
         VStack {
+            if vm.isLoading {
+                ProgressView()
+            } else {
+                content()
+            }
+        }
+        .padding(.horizontal)
+        .sheet(isPresented: $showingCurrencyList) {
+            CurrencyList(selected: vm.selectedCurrency, currencies: vm.currencyList) { id in
+                vm.selectedCurrency(id: id)
+                showingCurrencyList = false
+            }
+        }
+        .sheet(isPresented: $showingRatesList) {
+            CurrencyList(selected: vm.selectedRate, currencies: vm.rates) { id in
+                vm.selectedRate(id: id)
+                showingRatesList = false
+            }
+        }
+    }
+
+    @ViewBuilder
+    func content() -> some View {
+        VStack {
             if vm.isSelling {
                 CurrencySelector(inputField: $vm.sellingCurrencyValue, actionTitle: "Sell",
                                  currencyTitle: vm.selectedCurrency.description,
@@ -39,7 +63,15 @@ struct HomeScene: View {
                     .background(.gray)
                 Button(action: {
                     vm.isSelling.toggle()
-                }, label: { Image(systemName: "arrow.up.arrow.down") })
+                }, label: {
+                    Image(systemName: "arrow.up.arrow.down")
+                        .frame(width: 30, height: 30)
+                        .background(.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                })
             }
 
             if vm.isSelling {
@@ -64,21 +96,10 @@ struct HomeScene: View {
                 HStack {
                     Spacer()
                     Text("Non cash rate")
+                        .foregroundColor(vm.isNonCashAvailable ? Color.primary : .gray)
+                        .disabled(!vm.isNonCashAvailable)
                 }
             }).disabled(!vm.isNonCashAvailable)
-        }
-        .padding(.horizontal)
-        .sheet(isPresented: $showingCurrencyList) {
-            CurrencyList(selected: vm.selectedCurrency, currencies: vm.currencyList) { id in
-                vm.selectedCurrency(id: id)
-                showingCurrencyList = false
-            }
-        }
-        .sheet(isPresented: $showingRatesList) {
-            CurrencyList(selected: vm.selectedRate, currencies: vm.rates) { id in
-                vm.selectedRate(id: id)
-                showingRatesList = false
-            }
         }
     }
 }
