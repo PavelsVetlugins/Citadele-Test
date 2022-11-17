@@ -30,6 +30,8 @@
 		41A7B4B52926619400E3238D /* CurRateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 41CDBB4029265BF500971D16 /* CurRateResponse.json */; };
 		41A7B4B62926619400E3238D /* CurRateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 41CDBB4029265BF500971D16 /* CurRateResponse.json */; };
 		41A7B4B82926630D00E3238D /* CurrencyConverterVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4B72926630D00E3238D /* CurrencyConverterVMTest.swift */; };
+		41A7B4BA29268E7400E3238D /* XCTestCase+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4B929268E7400E3238D /* XCTestCase+.swift */; };
+		41A7B4BC2926905100E3238D /* RateCalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4BB2926905100E3238D /* RateCalculatorTest.swift */; };
 		41CDBB37292638E100971D16 /* RateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB36292638E100971D16 /* RateCalculator.swift */; };
 		41CDBB3929263A4A00971D16 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3829263A4A00971D16 /* AlertManager.swift */; };
 		41CDBB3C29263ABF00971D16 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3B29263ABF00971D16 /* DIContainer.swift */; };
@@ -86,6 +88,8 @@
 		41A7B4B029265F0100E3238D /* DIContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerMock.swift; sourceTree = "<group>"; };
 		41A7B4B32926617300E3238D /* ParsingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingTest.swift; sourceTree = "<group>"; };
 		41A7B4B72926630D00E3238D /* CurrencyConverterVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterVMTest.swift; sourceTree = "<group>"; };
+		41A7B4B929268E7400E3238D /* XCTestCase+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+.swift"; sourceTree = "<group>"; };
+		41A7B4BB2926905100E3238D /* RateCalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculatorTest.swift; sourceTree = "<group>"; };
 		41CDBB36292638E100971D16 /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		41CDBB3829263A4A00971D16 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		41CDBB3B29263ABF00971D16 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -204,8 +208,10 @@
 		4192574B2924CFB000668023 /* Citadele-testTests */ = {
 			isa = PBXGroup;
 			children = (
+				41A7B4BB2926905100E3238D /* RateCalculatorTest.swift */,
 				41A7B4B72926630D00E3238D /* CurrencyConverterVMTest.swift */,
 				41A7B4B32926617300E3238D /* ParsingTest.swift */,
+				41A7B4B929268E7400E3238D /* XCTestCase+.swift */,
 			);
 			path = "Citadele-testTests";
 			sourceTree = "<group>";
@@ -603,7 +609,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A7B4B42926617300E3238D /* ParsingTest.swift in Sources */,
+				41A7B4BC2926905100E3238D /* RateCalculatorTest.swift in Sources */,
 				41A7B4B82926630D00E3238D /* CurrencyConverterVMTest.swift in Sources */,
+				41A7B4BA29268E7400E3238D /* XCTestCase+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
