@@ -30,19 +30,11 @@ final class CurrencyConverterVM: ObservableObject {
 
     init() {
         bind()
-
-        let currateRequest: AnyPublisher<CurrateResponse, Error> = HttpService().fetchRequest(CurrencyRequest())
-
-        currateRequest.sink(receiveCompletion: { error in
-            print("+++ \(error)")
-        }, receiveValue: { result in
-            self._currencyList.send(result.data)
-        })
-        .store(in: &store)
     }
 
     private func bind() {
         cleanseInputBinding()
+        calculateRateBinding()
 
         _currencyList.compactMap { $0[safe: 0] }
             .receive(on: DispatchQueue.main)
@@ -63,7 +55,9 @@ final class CurrencyConverterVM: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: \.useNonCashRate, on: self)
             .store(in: &store)
+    }
 
+    private func calculateRateBinding() {
         let sellRate = $selectedRate.combineLatest($useNonCashRate, $isSelling)
             .compactMap { [weak self] rate, useNonCashRate, isSelling -> RateCalculator? in
                 guard let self,
@@ -149,6 +143,17 @@ final class CurrencyConverterVM: ObservableObject {
                 }
             })
             .store(in: &store)
+    }
+    
+    private func fetchRates() {
+        let currateRequest: AnyPublisher<CurrateResponse, Error> = HttpService().fetchRequest(CurrencyRequest())
+
+        currateRequest.sink(receiveCompletion: { error in
+            print("+++ \(error)")
+        }, receiveValue: { result in
+            self._currencyList.send(result.data)
+        })
+        .store(in: &store)
     }
 
     private func cleanseInput(input: String) -> String {
