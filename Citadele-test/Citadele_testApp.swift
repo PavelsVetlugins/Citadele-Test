@@ -26,6 +26,6 @@ struct Citadele_testApp: App {
 
     private func appLaunch() {
         DIContainer.shared.register(type: AlertManager.self, component: alertManager)
-        DIContainer.shared.register(type: CurrencyRateServiceProviding.self, component: CurrencyRateServiceMock())
+        DIContainer.shared.register(type: CurrencyRateServiceProviding.self, component: CurrencyRateService())
     }
 }
