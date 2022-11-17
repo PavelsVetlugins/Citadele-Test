@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct HomeScene: View {
-    @StateObject var vm = CurrencyConverterVM()
+struct CurrencyConverterScene: View {
+    @ObservedObject var vm: CurrencyConverterVM
     @State var showingCurrencyList = false
     @State var showingRatesList = false
 
@@ -106,6 +106,6 @@ struct HomeScene: View {
 
 struct HomeScene_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScene()
+        CurrencyConverterScene(vm: CurrencyConverterVM())
     }
 }

@@ -17,7 +17,7 @@ struct Citadele_testApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeScene()
+            CurrencyConverterScene(vm: CurrencyConverterVM())
                 .alert(isPresented: $alertManager.isPresented) {
                     alertManager.alert
                 }

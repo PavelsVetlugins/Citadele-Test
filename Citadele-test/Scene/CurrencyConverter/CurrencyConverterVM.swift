@@ -42,6 +42,8 @@ final class CurrencyConverterVM: ObservableObject {
         fetchRates()
     }
 
+    // MARK: - Binding
+
     private func bind() {
         cleanseInputBinding()
         calculateRateBinding()
@@ -156,6 +158,8 @@ final class CurrencyConverterVM: ObservableObject {
             .store(in: &store)
     }
 
+    // MARK: - Private
+
     private func fetchRates() {
         isLoading = true
 
@@ -187,7 +191,11 @@ final class CurrencyConverterVM: ObservableObject {
 
         return cleansedValue
     }
+}
 
+// MARK: - Public
+
+extension CurrencyConverterVM {
     public func selectedCurrency(id: String) {
         selectedCurrency = currencyList.first { $0.id == id } ?? .empty()
     }
