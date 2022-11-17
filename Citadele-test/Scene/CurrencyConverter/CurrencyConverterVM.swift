@@ -22,7 +22,7 @@ final class CurrencyConverterVM: ObservableObject {
 
     @Published var isLoading: Bool = true
     @Published var useNonCashRate: Bool = true
-    @Published var isNonCashAvailable: Bool = true
+    @Published var isCashRateAvailable: Bool = true
     @Published var isSelling: Bool = true
 
     private let _currencyList: CurrentValueSubject<[Currency], Never> = .init([])
@@ -56,10 +56,11 @@ final class CurrencyConverterVM: ObservableObject {
 
         $selectedRate.map { $0.buyRate != nil && $0.sellRate != nil }
             .receive(on: DispatchQueue.main)
-            .assign(to: \.isNonCashAvailable, on: self)
+            .assign(to: \.isCashRateAvailable, on: self)
             .store(in: &store)
 
-        $isNonCashAvailable.filter { $0 == false }
+        $isCashRateAvailable.filter { $0 == false }
+            .map { !$0 }
             .receive(on: DispatchQueue.main)
             .assign(to: \.useNonCashRate, on: self)
             .store(in: &store)

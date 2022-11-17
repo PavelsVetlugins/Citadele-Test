@@ -96,10 +96,10 @@ struct HomeScene: View {
                 HStack {
                     Spacer()
                     Text("Non cash rate")
-                        .foregroundColor(vm.isNonCashAvailable ? Color.primary : .gray)
-                        .disabled(!vm.isNonCashAvailable)
+                        .foregroundColor(vm.isCashRateAvailable ? Color.primary : .gray)
+                        .disabled(!vm.isCashRateAvailable)
                 }
-            }).disabled(!vm.isNonCashAvailable)
+            }).disabled(!vm.isCashRateAvailable)
         }
     }
 }
