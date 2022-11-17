@@ -32,9 +32,11 @@ final class CurrencyConverterVM: ObservableObject {
     // MARK: - Dependancies
 
     private let alertManager: AlertManager
+    private let currancyRateService: CurrencyRateServiceProviding
 
     init(diContainer: DIContainerProtocol = DIContainer.shared) {
         self.alertManager = diContainer.resolve()!
+        self.currancyRateService = diContainer.resolve()!
 
         bind()
         fetchRates()
@@ -156,19 +158,19 @@ final class CurrencyConverterVM: ObservableObject {
 
     private func fetchRates() {
         isLoading = true
-        let currateRequest: AnyPublisher<CurrateResponse, Error> = HttpService().fetchRequest(CurrencyRequest())
 
-        currateRequest.sink(receiveCompletion: { [weak self] result in
-            if case .failure = result {
-                self?.alertManager.presentAlert(infoAlert: NetworkError(onRetry: { [weak self] in
-                    self?.fetchRates()
-                }))
-            }
-        }, receiveValue: { [weak self] result in
-            self?._currencyList.send(result.data)
-            self?.isLoading = false
-        })
-        .store(in: &store)
+        currancyRateService.fetchRates()
+            .sink(receiveCompletion: { [weak self] result in
+                if case .failure = result {
+                    self?.alertManager.presentAlert(infoAlert: NetworkError(onRetry: { [weak self] in
+                        self?.fetchRates()
+                    }))
+                }
+            }, receiveValue: { [weak self] result in
+                self?._currencyList.send(result.data)
+                self?.isLoading = false
+            })
+            .store(in: &store)
     }
 
     private func cleanseInput(input: String) -> String {
