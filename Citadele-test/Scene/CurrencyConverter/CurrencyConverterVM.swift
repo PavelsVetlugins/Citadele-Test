@@ -23,7 +23,7 @@ final class CurrencyConverterVM: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var useNonCashRate: Bool = true
     @Published var isCashRateAvailable: Bool = true
-    @Published var isSelling: Bool = true
+    @Published var isCurrencyOnTop: Bool = true
 
     private let _currencyList: CurrentValueSubject<[Currency], Never> = .init([])
     public var currencyList: [Currency] { _currencyList.value }
@@ -71,7 +71,7 @@ final class CurrencyConverterVM: ObservableObject {
     }
 
     private func calculateRateBinding() {
-        let sellRate = $selectedRate.combineLatest($useNonCashRate, $isSelling)
+        let sellRate = $selectedRate.combineLatest($useNonCashRate, $isCurrencyOnTop)
             .compactMap { [weak self] rate, useNonCashRate, isSelling -> RateCalculator? in
                 guard let self,
                       let sell = useNonCashRate ? rate.buyTransfer : rate.buyRate,

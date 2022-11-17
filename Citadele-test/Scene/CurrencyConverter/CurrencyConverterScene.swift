@@ -38,7 +38,7 @@ struct CurrencyConverterScene: View {
     @ViewBuilder
     func content() -> some View {
         VStack {
-            if vm.isSelling {
+            if vm.isCurrencyOnTop {
                 CurrencySelector(inputField: $vm.sellingCurrencyValue, actionTitle: "Sell",
                                  currencyTitle: vm.selectedCurrency.description,
                                  currencyCode: vm.selectedCurrency.id, onCurrecnyTap: {
@@ -62,7 +62,7 @@ struct CurrencyConverterScene: View {
                 }.frame(height: 0.5)
                     .background(.gray)
                 Button(action: {
-                    vm.isSelling.toggle()
+                    vm.isCurrencyOnTop.toggle()
                 }, label: {
                     Image(systemName: "arrow.up.arrow.down")
                         .frame(width: 30, height: 30)
@@ -74,7 +74,7 @@ struct CurrencyConverterScene: View {
                 })
             }
 
-            if vm.isSelling {
+            if vm.isCurrencyOnTop {
                 CurrencySelector(inputField: $vm.buyingCurrencyValue, actionTitle: "Buy",
                                  currencyTitle: vm.selectedRate.description,
                                  currencyCode: vm.selectedRate.id, onCurrecnyTap: {
