@@ -13,6 +13,8 @@ class CurrencyFormatter {
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = 2
         numberFormatter.usesGroupingSeparator = false
+        numberFormatter.positiveFormat = "0.00"
+        numberFormatter.negativeFormat = "-0.00"
         return numberFormatter
     }()
 

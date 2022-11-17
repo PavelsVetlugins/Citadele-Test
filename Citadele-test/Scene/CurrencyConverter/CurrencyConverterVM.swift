@@ -92,7 +92,7 @@ final class CurrencyConverterVM: ObservableObject {
             .withLatestFrom(isBuyingFieldEditing)
             .filter { $1 == false }
             .map { value, _ in value }
-            .compactMap { Double($0) }
+            .map { Double($0) ?? 0 }
             .share()
 
         let triggerSellCalculation = Publishers.CombineLatest3(sellingCurrencyValidChange, $selectedCurrency, sellRate)
@@ -110,7 +110,7 @@ final class CurrencyConverterVM: ObservableObject {
             .withLatestFrom(isSellingFieldEditing)
             .filter { $1 == false }
             .map { value, _ in value }
-            .compactMap { Double($0) }
+            .map { Double($0) ?? 0 }
             .share()
 
         let triggerBuyCalculation = buyingCurrencyValidChange.withLatestFrom(sellRate)

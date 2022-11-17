@@ -20,13 +20,16 @@
 		4192573B2924CFAE00668023 /* Citadele_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192573A2924CFAE00668023 /* Citadele_testApp.swift */; };
 		4192573F2924CFB000668023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4192573E2924CFB000668023 /* Assets.xcassets */; };
 		419257432924CFB000668023 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419257422924CFB000668023 /* Preview Assets.xcassets */; };
-		4192574D2924CFB000668023 /* Citadele_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192574C2924CFB000668023 /* Citadele_testTests.swift */; };
 		419257572924CFB000668023 /* Citadele_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257562924CFB000668023 /* Citadele_testUITests.swift */; };
 		419257592924CFB000668023 /* Citadele_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */; };
 		419257682924D35B00668023 /* CurrencyConverterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419257672924D35B00668023 /* CurrencyConverterScene.swift */; };
 		41941F8C29254EC700B0CC9D /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */; };
 		41A7B4AF29265ED600E3238D /* CurrencyRateServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */; };
 		41A7B4B129265F0100E3238D /* DIContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4B029265F0100E3238D /* DIContainerMock.swift */; };
+		41A7B4B42926617300E3238D /* ParsingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4B32926617300E3238D /* ParsingTest.swift */; };
+		41A7B4B52926619400E3238D /* CurRateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 41CDBB4029265BF500971D16 /* CurRateResponse.json */; };
+		41A7B4B62926619400E3238D /* CurRateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 41CDBB4029265BF500971D16 /* CurRateResponse.json */; };
+		41A7B4B82926630D00E3238D /* CurrencyConverterVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B4B72926630D00E3238D /* CurrencyConverterVMTest.swift */; };
 		41CDBB37292638E100971D16 /* RateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB36292638E100971D16 /* RateCalculator.swift */; };
 		41CDBB3929263A4A00971D16 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3829263A4A00971D16 /* AlertManager.swift */; };
 		41CDBB3C29263ABF00971D16 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CDBB3B29263ABF00971D16 /* DIContainer.swift */; };
@@ -74,7 +77,6 @@
 		419257402924CFB000668023 /* Citadele_test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Citadele_test.entitlements; sourceTree = "<group>"; };
 		419257422924CFB000668023 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		419257482924CFB000668023 /* Citadele-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Citadele-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4192574C2924CFB000668023 /* Citadele_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testTests.swift; sourceTree = "<group>"; };
 		419257522924CFB000668023 /* Citadele-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Citadele-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419257562924CFB000668023 /* Citadele_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITests.swift; sourceTree = "<group>"; };
 		419257582924CFB000668023 /* Citadele_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Citadele_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 		41941F8B29254EC700B0CC9D /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
 		41A7B4AE29265ED600E3238D /* CurrencyRateServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateServiceMock.swift; sourceTree = "<group>"; };
 		41A7B4B029265F0100E3238D /* DIContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerMock.swift; sourceTree = "<group>"; };
+		41A7B4B32926617300E3238D /* ParsingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingTest.swift; sourceTree = "<group>"; };
+		41A7B4B72926630D00E3238D /* CurrencyConverterVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterVMTest.swift; sourceTree = "<group>"; };
 		41CDBB36292638E100971D16 /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		41CDBB3829263A4A00971D16 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		41CDBB3B29263ABF00971D16 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -200,7 +204,8 @@
 		4192574B2924CFB000668023 /* Citadele-testTests */ = {
 			isa = PBXGroup;
 			children = (
-				4192574C2924CFB000668023 /* Citadele_testTests.swift */,
+				41A7B4B72926630D00E3238D /* CurrencyConverterVMTest.swift */,
+				41A7B4B32926617300E3238D /* ParsingTest.swift */,
 			);
 			path = "Citadele-testTests";
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A7B4B52926619400E3238D /* CurRateResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A7B4B62926619400E3238D /* CurRateResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +602,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4192574D2924CFB000668023 /* Citadele_testTests.swift in Sources */,
+				41A7B4B42926617300E3238D /* ParsingTest.swift in Sources */,
+				41A7B4B82926630D00E3238D /* CurrencyConverterVMTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,7 +828,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pavel.citadele.test.Citadele-testTests";
@@ -843,7 +851,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pavel.citadele.test.Citadele-testTests";
@@ -865,7 +873,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pavel.citadele.test.Citadele-testUITests";
@@ -887,7 +895,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pavel.citadele.test.Citadele-testUITests";
